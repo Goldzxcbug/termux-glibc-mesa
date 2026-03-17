@@ -90,14 +90,7 @@ jobs:
           echo "📥 克隆 Mesa 仓库..."
           git clone https://gitlab.freedesktop.org/mesa/mesa.git mesa
           cd mesa
-      - name: 应用 FD710 / FD720 补丁（来自仓库）
-        run: |
-          echo "🔧 应用 FD710 / FD720 补丁"
-          cd mesa
-          git apply --verbose ../full_fixed_710_720-1.patch
-          git apply --verbose ../0003-fix-for-anon-file.patch
-          git apply --verbose ../0018-disable-general-layout-in-zink-for-turnip.patch
-          echo "✅ 补丁应用完成"
+      
       
       - name: 自定义品牌
         run: |
